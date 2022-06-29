@@ -2,7 +2,9 @@
     link:
       relink: true
 
-- clean: ["~"]
+- clean: ['~']
 
 - link:
     ~/.gitconfig:
+    ~/.zshrc:
+    ~/.bashrc:
