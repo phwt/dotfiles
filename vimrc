@@ -24,5 +24,7 @@ set incsearch
 map <space> /
 map <C-space> ?
 
-noremap <C-n> :set rnu!<CR> " Toggle relative number
-noremap <Esc> <Esc>:set nornu<CR> " Turn relative number off on <Esc>
+" Toggle relative number
+nnoremap <C-n> :set rnu!<CR> 
+" Turn relative number off on <Esc>
+nnoremap <Esc> <Esc>:set nornu<CR> 
