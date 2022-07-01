@@ -3,6 +3,8 @@
 
 alias k="kubectl"
 alias go="g open"
+alias flushdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;echo "DNS flushed"'
+alias dnt="dotnet"
 
 alias nr="npm run"
 alias ns="npm start"
