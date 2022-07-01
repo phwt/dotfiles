@@ -20,11 +20,14 @@ set clipboard+=unnamed
 set scrolloff=5
 set incsearch
 
-" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-map <space> /
-map <C-space> ?
+" Map <Space> to / (search) and Shift-<Space> to ? (backwards search)
+nmap <space> /
+nmap <leader><space> ?
 
 " Toggle relative number
 nnoremap <C-n> :set rnu!<CR> 
 " Turn relative number off on <Esc>
 nnoremap <Esc> <Esc>:set nornu<CR> 
+
+" Place cursor at end of selection after visual yanking 
+vmap y ygv<Esc>
