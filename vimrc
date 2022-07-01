@@ -23,3 +23,6 @@ set incsearch
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
 map <C-space> ?
+
+noremap <C-n> :set rnu!<CR> " Toggle relative number
+noremap <Esc> <Esc>:set nornu<CR> " Turn relative number off on <Esc>
