@@ -26,8 +26,6 @@ nmap <leader><space> ?
 
 " Toggle relative number
 nnoremap <C-n> :set rnu!<CR> 
-" Turn relative number off on <Esc>
-nnoremap <Esc> <Esc>:set nornu<CR> 
 
 " Place cursor at end of selection after visual yanking 
 vmap y ygv<Esc>
