@@ -11,6 +11,7 @@ Plug 'terryma/vim-expand-region'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sensible'
+Plug 'zef/vim-cycle'
 
 call plug#end()
 
