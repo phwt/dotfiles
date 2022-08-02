@@ -1,9 +1,27 @@
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/bashrc.pre.bash" ]] && . "$HOME/.fig/shell/bashrc.pre.bash"
 
-alias k="kubectl"
 alias flushdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;echo "DNS flushed"'
 alias dnt="dotnet"
+
+alias k="kubectl"
+alias kg="k get -o wide"
+alias kd="k describe"
+alias ka="k apply -f"
+alias kl="k logs -f"
+
+# Pods logging with prompt for matching pattern
+function klp() {
+    pods=$(kubectl get pods)
+    echo "$pods"
+
+    read "pattern?Pattern: "
+    result=$(grep -m 1 $pattern <<< "$pods")
+    pod_id=$(awk -F' ' '{print $1}' <<<"$result")
+
+    echo "Tailing the logs of: $pod_id"
+    kubectl logs -f $pod_id
+}
 
 alias go="g open"
 alias grhh="grh HEAD^"
