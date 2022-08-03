@@ -4,6 +4,9 @@
 alias flushdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;echo "DNS flushed"'
 alias dnt="dotnet"
 
+alias dkr="docker"
+alias dkc="docker-compose"
+
 alias k="kubectl"
 alias kg="k get -o wide"
 alias kd="k describe"
@@ -16,11 +19,16 @@ function klp() {
     echo "$pods"
 
     read "pattern?Pattern: "
-    result=$(grep -m 1 $pattern <<< "$pods")
+    result=$(grep -m 1 $pattern <<<"$pods")
     pod_id=$(awk -F' ' '{print $1}' <<<"$result")
 
     echo "Tailing the logs of: $pod_id"
     kubectl logs -f $pod_id
+}
+
+# Dry-run helm install
+function hid() {
+    helm install $1 $2 --dry-run --debug 2>&1 | less
 }
 
 alias go="g open"
