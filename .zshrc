@@ -81,6 +81,7 @@ plugins=(git)
 plugins+=(zsh-vi-mode)
 plugins+=(you-should-use)
 plugins+=(git-open)
+plugins+=(zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
