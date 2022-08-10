@@ -15,7 +15,7 @@ alias kl="k logs -f"
 
 # Pods logging with prompt for matching pattern
 function klp() {
-    pods=$(kubectl get pods)
+    pods=$(kubectl get pods $@)
     echo "$pods"
 
     read "pattern?Pattern: "
@@ -24,6 +24,19 @@ function klp() {
 
     echo "Tailing the logs of: $pod_id"
     kubectl logs -f $pod_id
+}
+
+# Get and copy the matching resource id to the clipboard
+function kcp() {
+    output=$(kubectl get $@ -o wide)
+    echo "$output"
+
+    read "pattern?Pattern: "
+    result=$(grep -m 1 $pattern <<<"$output")
+    res_id=$(awk -F' ' '{print $1}' <<<"$result")
+
+    echo -n "$res_id" | pbcopy
+    echo "Added to clipboard: $res_id"
 }
 
 # Dry-run helm install
