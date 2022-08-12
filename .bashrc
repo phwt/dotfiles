@@ -44,7 +44,9 @@ function hid() {
     helm install $1 $2 --dry-run --debug 2>&1 | less
 }
 
-alias go="g open"
+alias go="git open"
+alias goa="git open -b -s actions"                                    # Open repository actions page
+alias goc='git open -b -s compare/$(git rev-parse --abbrev-ref HEAD)' # Open compare page for current branch against default branch
 alias grhh="grh HEAD^"
 
 alias nr="npm run"
