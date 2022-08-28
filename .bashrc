@@ -55,5 +55,8 @@ alias nrd="npm run dev"
 alias nrde="npm run develop"
 alias nrb="npm run build"
 
+# WSL Alias
+alias eo="explorer.exe ."
+
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/bashrc.post.bash" ]] && . "$HOME/.fig/shell/bashrc.post.bash"
