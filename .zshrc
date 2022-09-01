@@ -22,8 +22,6 @@ plugins+=(zsh-vi-mode)
 plugins+=(you-should-use)
 plugins+=(git-open)
 plugins+=(zsh-syntax-highlighting)
-plugins+=(zsh-autosuggestions)
-plugins+=(zsh-autocomplete)
 
 source $ZSH/oh-my-zsh.sh
 
