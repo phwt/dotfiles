@@ -13,6 +13,11 @@ alias kd="k describe"
 alias ka="k apply -f"
 alias kl="k logs -f"
 
+# Set default namespace
+function kdns() {
+    kubectl config set-context --current --namespace=$@
+}
+
 # Pods logging with prompt for matching pattern
 function klp() {
     pods=$(kubectl get pods $@)
