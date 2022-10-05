@@ -2,6 +2,7 @@
 [[ -f "$HOME/.fig/shell/bashrc.pre.bash" ]] && builtin source "$HOME/.fig/shell/bashrc.pre.bash"
 alias flushdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;echo "DNS flushed"'
 alias dnt="dotnet"
+alias tf="terraform"
 
 alias dkr="docker"
 alias dkc="docker-compose"
@@ -53,6 +54,9 @@ alias goa="git open -b -s actions"                                    # Open rep
 alias goc='git open -b -s compare/$(git rev-parse --abbrev-ref HEAD)' # Open compare page for current branch against default branch
 alias grhh="grh HEAD^"                                                # Uncommit latest
 alias gstas='git stash -- $(git diff --staged --name-only)'           # Stash only staged changes
+alias gt="git tag"
+alias gtd="git tag -d"          # Delete local tag
+alias gtdr="git push -d origin" # Delete remote tag
 
 alias nr="npm run"
 alias ns="npm start"
