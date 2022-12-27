@@ -12,7 +12,6 @@ tap "norwoodj/tap"
 tap "osx-cross/arm"
 tap "osx-cross/avr"
 tap "qmk/qmk"
-tap "turbot/tap"
 # Run your GitHub Actions locally 🚀
 brew "act"
 # Automate deployment, configuration, and upgrading
@@ -106,7 +105,7 @@ brew "mas"
 # Java-based project management
 brew "maven"
 # Platform built on V8 to build network applications
-brew "node@16"
+brew "node"
 # MongoDB Shell to connect, configure, query, and work with your MongoDB database
 brew "mongosh"
 # Message broker implementing the MQTT protocol
@@ -121,10 +120,6 @@ brew "nginx"
 brew "ninja"
 # Port scanning utility for large networks
 brew "nmap"
-# Platform built on V8 to build network applications
-brew "node@14"
-# Friendly PIL fork (Python Imaging Library)
-brew "pillow"
 # Object-relational database system
 brew "postgresql@14"
 # Interpreted, interactive, object-oriented programming language
@@ -141,8 +136,6 @@ brew "terragrunt"
 brew "tfenv"
 # Internet file retriever
 brew "wget"
-# Download YouTube videos from the command-line
-brew "youtube-dl"
 # Better and friendly vi(vim) mode plugin for ZSH
 brew "zsh-vi-mode"
 # Terraform
@@ -155,12 +148,8 @@ brew "mongodb/brew/mongodb-community"
 brew "norwoodj/tap/helm-docs"
 # Quantum Mechanical Keyboard (QMK) Firmware
 brew "qmk/qmk/qmk"
-# Steampipe exposes APIs and services as a high-performance relational database, giving you the ability to write SQL-based queries to explore, assess and report on dynamic data.
-brew "turbot/tap/steampipe"
 # Command-line helper for the 1Password password manager
 cask "1password-cli"
-# Enable Windows-like alt-tab
-cask "alt-tab"
 # Browser for SQLite databases
 cask "db-browser-for-sqlite"
 # Pre-built GNU bare-metal toolchain for 32-bit Arm processors
@@ -173,8 +162,6 @@ cask "macfuse"
 cask "osxfuse"
 # Toolbox companion for QMK Firmware
 cask "qmk-toolbox"
-# Development environment
-cask "vagrant"
 # Multi-platform graphical interface for official Nmap Security Scanner
 cask "zenmap"
 mas "1Password for Safari", id: 1569813296
