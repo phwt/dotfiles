@@ -2,7 +2,10 @@
 [[ -f "$HOME/.fig/shell/bashrc.pre.bash" ]] && builtin source "$HOME/.fig/shell/bashrc.pre.bash"
 alias flushdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;echo "DNS flushed"'
 alias dnt="dotnet"
+alias ls="ls -Gl"
+
 alias tf="terraform"
+alias tfws="terraform workspace select"
 
 alias dkr="docker"
 alias dkc="docker-compose"

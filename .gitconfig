@@ -1,6 +1,7 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = vim
+	ignorecase = false
 [user]
 	name = phwt
 	email = 28344318+phwt@users.noreply.github.com
