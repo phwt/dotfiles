@@ -55,11 +55,12 @@ function hid() {
 alias go="git open"
 alias goa="git open -b -s actions"                                    # Open repository actions page
 alias goc='git open -b -s compare/$(git rev-parse --abbrev-ref HEAD)' # Open compare page for current branch against default branch
-alias grhh="grh HEAD^"                                                # Uncommit latest
+alias grhh="git reset HEAD^"                                          # Uncommit latest
 alias gstas='git stash -- $(git diff --staged --name-only)'           # Stash only staged changes
 alias gt="git tag"
 alias gtd="git tag -d"          # Delete local tag
 alias gtdr="git push -d origin" # Delete remote tag
+alias gsur="git submodule update --remote"
 
 alias nr="npm run"
 alias ns="npm start"
