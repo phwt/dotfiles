@@ -59,6 +59,7 @@ alias gt="git tag"
 alias gtd="git tag -d"          # Delete local tag
 alias gtdr="git push -d origin" # Delete remote tag
 alias gsur="git submodule update --remote"
+alias gbdm="git branch --merged | egrep -v "(^\*|master|main|dev|acc)" | xargs git branch -d"
 
 alias nr="npm run"
 alias ns="npm start"
