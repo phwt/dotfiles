@@ -102,7 +102,6 @@ mas "OneDrive", id: 823766827
 mas "rcmd", id: 1596283165
 mas "RunCat", id: 1429033973
 mas "Sequel Ace", id: 1518036000
-mas "Slack", id: 803453959
 mas "Tag Editor Lite", id: 984278082
 mas "Telegram", id: 747648890
 mas "The Unarchiver", id: 425424353
