@@ -70,6 +70,8 @@ alias nrd="npm run dev"
 alias nrde="npm run develop"
 alias nrb="npm run build"
 
+alias python="python3"
+
 function killport() {
     kill -9 $(lsof -i TCP:$@ | awk '/LISTEN/{print $2}')
 }
