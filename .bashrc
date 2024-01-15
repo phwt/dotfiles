@@ -55,6 +55,11 @@ function gtd() {
     git tag -d $1 && git push -d origin $1
 }
 
+# Clone and cd
+function gccd() {
+    git clone "$1" && cd "$(basename $1 .git)";
+}
+
 alias go="git open"
 alias goa="git open -b -s actions"                                    # Open repository actions page
 alias goc='git open -b -s compare/$(git rev-parse --abbrev-ref HEAD)' # Open compare page for current branch against default branch
