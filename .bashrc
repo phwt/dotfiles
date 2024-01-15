@@ -50,13 +50,18 @@ function hid() {
     helm install $1 $2 --dry-run --debug 2>&1 | less
 }
 
+# Delete both local and remote tag
+function gtd() {
+    git tag -d $1 && git push -d origin $1
+}
+
 alias go="git open"
 alias goa="git open -b -s actions"                                    # Open repository actions page
 alias goc='git open -b -s compare/$(git rev-parse --abbrev-ref HEAD)' # Open compare page for current branch against default branch
 alias grhh="git reset HEAD^"                                          # Uncommit latest
 alias gstas='git stash -- $(git diff --staged --name-only)'           # Stash only staged changes
 alias gt="git tag"
-alias gtd="git tag -d"          # Delete local tag
+alias gtdl="git tag -d"         # Delete local tag
 alias gtdr="git push -d origin" # Delete remote tag
 alias gsur="git submodule update --remote"
 alias gfp="git fetch --prune"
