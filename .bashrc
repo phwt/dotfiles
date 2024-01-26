@@ -57,7 +57,7 @@ function gtd() {
 
 # Clone and cd
 function gccd() {
-    git clone "$1" && cd "$(basename $1 .git)";
+    git clone "$1" && cd "$(basename $1 .git)"
 }
 
 alias go="git open"
@@ -84,6 +84,18 @@ alias python="python3"
 
 function killport() {
     kill -9 $(lsof -i TCP:$@ | awk '/LISTEN/{print $2}')
+}
+
+function b64e() {
+    echo -n $1 | base64
+}
+
+function b64en() {
+    echo $1 | base64
+}
+
+function b64d() {
+    echo $1 | base64 -d
 }
 
 # WSL Alias
