@@ -1,6 +1,6 @@
 alias flushdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;echo "DNS flushed"'
 alias dnt="dotnet"
-alias ls="ls -Gl"
+alias ls="ls -Gla"
 
 alias tf="terraform"
 alias tfws="terraform workspace select"
@@ -81,6 +81,7 @@ alias nrde="npm run develop"
 alias nrb="npm run build"
 
 alias python="python3"
+alias py="python"
 
 function killport() {
     kill -9 $(lsof -i TCP:$@ | awk '/LISTEN/{print $2}')
