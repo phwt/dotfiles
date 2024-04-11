@@ -4,7 +4,7 @@ fi
 
 alias flushdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;echo "DNS flushed"'
 alias dnt="dotnet"
-alias ls="ls -Gla"
+alias ls="ls -Gla --color"
 
 alias tf="terraform"
 alias tfws="terraform workspace select"
