@@ -1,3 +1,7 @@
+if [ -t 1 ]; then
+  exec zsh
+fi
+
 alias flushdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;echo "DNS flushed"'
 alias dnt="dotnet"
 alias ls="ls -Gla"
