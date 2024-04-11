@@ -40,3 +40,13 @@
    p10k configure
    ```
 
+### Additional for Git Bash on Windows
+
+#### Install `jq`
+
+Install `jq` from [jqlang/jq](https://github.com/jqlang/jq)
+
+```sh
+curl -L -o /usr/bin/jq.exe https://github.com/jqlang/jq/releases/latest/download/jq-win64.exe
+```
+
