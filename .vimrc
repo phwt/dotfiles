@@ -20,6 +20,8 @@ let mapleader = ","
 set clipboard+=unnamed
 set scrolloff=5
 set incsearch
+set number
+set belloff=esc
 
 " Map <Space> to / (search) and Shift-<Space> to ? (backwards search)
 nmap <space> /
