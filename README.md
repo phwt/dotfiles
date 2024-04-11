@@ -7,6 +7,12 @@
   - [Git with Bash](https://git-scm.com/downloads)
   - [Zsh](https://packages.msys2.org/package/zsh)
 
+<details>
+  <summary>Windows Terminal profile</summary>
+
+  ![image](https://github.com/phwt/dotfiles/assets/28344318/d4132c43-968c-4f61-b65e-7251a5881064)
+</details>
+
 ## Setup
 
 1. (For Git Bash on Windows) Start shell as administrator and enable symlink
