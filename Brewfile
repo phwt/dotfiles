@@ -46,11 +46,8 @@ mas "Brother iPrint&Scan", id: 1193539993
 mas "Goodnotes", id: 1444383602
 mas "LINE", id: 539883307
 mas "Magnet", id: 441258766
-mas "Messenger", id: 1480068668
-mas "Microsoft Remote Desktop", id: 1295203466
 mas "rcmd", id: 1596283165
 mas "RunCat", id: 1429033973
 mas "Sequel Ace", id: 1518036000
 mas "The Unarchiver", id: 425424353
 mas "Time Out", id: 402592703
-mas "Trello", id: 1278508951
