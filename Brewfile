@@ -1,12 +1,14 @@
 tap "1password/tap"
 tap "azure/functions"
+tap "buo/cask-upgrade"
+tap "grishka/grishka" # for NearDrop
 tap "hashicorp/tap"
 tap "homebrew/bundle"
-tap "homebrew/cask-drivers"
 tap "homebrew/services"
 tap "qmk/qmk"
 brew "act"
 brew "azure-cli"
+brew "python@3.12"
 brew "git"
 brew "grep"
 brew "jq"
@@ -15,12 +17,12 @@ brew "mackup"
 brew "mas"
 brew "openjdk"
 brew "maven"
-brew "node"
 brew "mysql"
 brew "nginx"
 brew "nmap"
+brew "node"
 brew "node@16"
-brew "python@3.12"
+brew "openshift-cli"
 brew "rcm"
 brew "telnet"
 brew "terraform-docs"
@@ -30,15 +32,18 @@ brew "yj"
 brew "hashicorp/tap/terraform", link: false
 brew "qmk/qmk/qmk"
 cask "1password-cli"
+cask "dozer"
 cask "iterm2"
 cask "macfuse"
+cask "neardrop"
 cask "qmk-toolbox"
 cask "raycast"
 cask "zenmap"
 mas "1Password for Safari", id: 1569813296
 mas "Amphetamine", id: 937984704
+mas "Balance Lock", id: 1019371109
 mas "Brother iPrint&Scan", id: 1193539993
-mas "GoodNotes", id: 1444383602
+mas "Goodnotes", id: 1444383602
 mas "LINE", id: 539883307
 mas "Magnet", id: 441258766
 mas "Messenger", id: 1480068668
