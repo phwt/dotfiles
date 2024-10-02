@@ -105,3 +105,5 @@ function b64d() {
 
 # WSL Alias
 alias eo="explorer.exe ."
+
+DOTNET_CLI_TELEMETRY_OPTOUT=1
