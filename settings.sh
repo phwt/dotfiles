@@ -13,10 +13,10 @@ defaults write -g AppleActionOnDoubleClick 'Maximize'
 
 # * Dock
 
-defaults write com.apple.dock static-only -bool true # Show only active apps
+defaults write com.apple.dock static-only -bool true              # Show only active apps
 defaults write com.apple.Dock appswitcher-all-displays -bool true # Show app switcher on all displays
-defaults write com.apple.dock autohide-delay -float 0 # Show Dock instantly
-defaults write com.apple.dock autohide -bool true # Automatically hide and show the Dock
+defaults write com.apple.dock autohide-delay -float 0             # Show Dock instantly
+defaults write com.apple.dock autohide -bool true                 # Automatically hide and show the Dock
 
 # * Finder
 
@@ -32,7 +32,20 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 
+# * Keybindings
+mkdir -p $HOME/Library/KeyBindings
+echo '{
+  "\UF729" = "moveToBeginningOfLine:"; /* Home */
+  "\UF72B" = "moveToEndOfLine:"; /* End */
+  "$\UF729" = "moveToBeginningOfLineAndModifySelection:"; /* Shift + Home */
+  "$\UF72B" = "moveToEndOfLineAndModifySelection:"; /* Shift + End */
+  "^\UF729" = "moveToBeginningOfDocument:"; /* Ctrl + Home */
+  "^\UF72B" = "moveToEndOfDocument:"; /* Ctrl + End */
+  "$^\UF729" = "moveToBeginningOfDocumentAndModifySelection:"; /* Shift + Ctrl + Home */
+  "$^\UF72B" = "moveToEndOfDocumentAndModifySelection:"; /* Shift + Ctrl + End */
+}' >$HOME/Library/KeyBindings/DefaultKeyBinding.dict
+
 killall Dock
 killall Finder
 
-echo 'Finished configuration'
+echo 'Finished configuration, reboot required for some changes to take effect'
