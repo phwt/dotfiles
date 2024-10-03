@@ -8,10 +8,15 @@ set -e
 # http://osxdaily.com/2012/05/10/disable-elastic-rubber-band-scrolling-in-mac-os-x/
 defaults write -g NSScrollViewRubberbanding -int 0
 
-# Maximize windows on double clicking them:
-defaults write -g AppleActionOnDoubleClick 'Maximize'
+defaults write -g AppleActionOnDoubleClick 'Maximize'                                  # Maximize windows on double clicking them:
+defaults write com.apple.menuextra.clock "DateFormat" -string "\"EEE MMM d HH:mm:ss\"" # Clock format
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true    # Three finger drag
 
 # * Dock
+
+defaults write com.apple.dock tilesize -int 16         # Dock size
+defaults write com.apple.dock largesize -int 96        # Magnified icon size
+defaults write com.apple.dock magnification -bool true # Enable magnification
 
 defaults write com.apple.dock static-only -bool true              # Show only active apps
 defaults write com.apple.Dock appswitcher-all-displays -bool true # Show app switcher on all displays
@@ -34,12 +39,14 @@ defaults write com.apple.dock wvous-br-modifier -int 0 # No modifier
 # * Finder
 
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-defaults write com.apple.finder _FXSortFoldersFirst -bool true
-defaults write com.apple.finder ShowPathbar -bool true
-defaults write com.apple.finder AppleShowAllFiles -bool true
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
+defaults write com.apple.finder AppleShowAllFiles -bool true
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+defaults write com.apple.finder FXPreferredViewStyle Nlsv # Set list view as preferred view style
+defaults write com.apple.finder ShowPathbar -bool true
+defaults write com.apple.finder ShowStatusBar -bool true
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 # Always use expanded save dialog:
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
