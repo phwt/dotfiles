@@ -18,6 +18,19 @@ defaults write com.apple.Dock appswitcher-all-displays -bool true # Show app swi
 defaults write com.apple.dock autohide-delay -float 0             # Show Dock instantly
 defaults write com.apple.dock autohide -bool true                 # Automatically hide and show the Dock
 
+# Hot corners
+defaults write com.apple.dock wvous-tl-corner -int 3        # Show application windows
+defaults write com.apple.dock wvous-tl-modifier -int 262144 # Control
+
+defaults write com.apple.dock wvous-tr-corner -int 11       # Launchpad
+defaults write com.apple.dock wvous-tr-modifier -int 262144 # Control
+
+defaults write com.apple.dock wvous-bl-corner -int 2   # Mission Control
+defaults write com.apple.dock wvous-bl-modifier -int 0 # No modifier
+
+defaults write com.apple.dock wvous-br-corner -int 4   # Desktop
+defaults write com.apple.dock wvous-br-modifier -int 0 # No modifier
+
 # * Finder
 
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
