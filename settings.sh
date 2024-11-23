@@ -2,17 +2,14 @@
 
 set -e
 
-# * General
+### General
 
-# Deactivates rubber scrolling:
-# http://osxdaily.com/2012/05/10/disable-elastic-rubber-band-scrolling-in-mac-os-x/
-defaults write -g NSScrollViewRubberbanding -int 0
-
-defaults write -g AppleActionOnDoubleClick 'Maximize'                                  # Maximize windows on double clicking them:
+defaults write -g NSScrollViewRubberbanding -int 0                                     # Deactivates rubber scrolling: http://osxdaily.com/2012/05/10/disable-elastic-rubber-band-scrolling-in-mac-os-x/
+defaults write -g AppleActionOnDoubleClick 'Maximize'                                  # Maximize windows on double clicking them
 defaults write com.apple.menuextra.clock "DateFormat" -string "\"EEE MMM d HH:mm:ss\"" # Clock format
 defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true    # Three finger drag
 
-# * Dock
+### Dock
 
 defaults write com.apple.dock tilesize -int 16         # Dock size
 defaults write com.apple.dock largesize -int 96        # Magnified icon size
@@ -36,7 +33,7 @@ defaults write com.apple.dock wvous-bl-modifier -int 0 # No modifier
 defaults write com.apple.dock wvous-br-corner -int 4   # Desktop
 defaults write com.apple.dock wvous-br-modifier -int 0 # No modifier
 
-# * Finder
+### Finder
 
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
@@ -48,11 +45,12 @@ defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder ShowStatusBar -bool true
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
-# Always use expanded save dialog:
+# Always use expanded save dialog
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 
-# * Keybindings
+### Keybindings
+
 mkdir -p $HOME/Library/KeyBindings
 echo '{
   "\UF729" = "moveToBeginningOfLine:"; /* Home */
