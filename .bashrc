@@ -1,4 +1,4 @@
-# ? Only required for WSL
+# ? Only required for Git Bash for Windows
 # if [ -t 1 ]; then
 #   exec zsh
 # fi
@@ -11,7 +11,7 @@ alias tf="terraform"
 alias tfws="terraform workspace select"
 
 alias dkr="docker"
-alias dkc="docker-compose"
+alias dkc="docker compose"
 
 alias k="kubectl"
 alias kg="k get -o wide"
@@ -76,7 +76,7 @@ alias gtdr="git push -d origin" # Delete remote tag
 alias gsur="git submodule update --remote"
 alias gfp="git fetch --prune"
 alias gbdm="git branch --merged | egrep -v \"(^\*|master|main|dev|acc)\" | xargs git branch -d" # Delete merged branch
-alias gbds="git-delete-squashed "                                                               # https://github.com/teppeis/git-delete-squashed
+alias gbds="git-delete-squashed"                                                                # https://github.com/teppeis/git-delete-squashed
 alias gbc="gbdm && gbds"
 
 alias nr="npm run"
@@ -108,3 +108,4 @@ function b64d() {
 alias eo="explorer.exe ."
 
 DOTNET_CLI_TELEMETRY_OPTOUT=1
+HOMEBREW_NO_ANALYTICS=1

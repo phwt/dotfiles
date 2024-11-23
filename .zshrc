@@ -10,7 +10,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# Timespamp format in `history` output
+# Timestamp format in `history` output
 HIST_STAMPS="%d/%m/%Y %R"
 
 # Custom plugins
