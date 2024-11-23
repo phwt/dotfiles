@@ -2,10 +2,11 @@
     link:
       relink: true
 
-- clean: ['~']
+- clean: ["~"]
 
 - link:
     ~/.gitconfig: .gitconfig
     ~/.zshrc: .zshrc
     ~/.bashrc: .bashrc
     ~/.vimrc: .vimrc
+    ~/.p10k.zsh: .p10k.zsh
