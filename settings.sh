@@ -41,6 +41,7 @@ defaults write com.apple.finder _FXSortFoldersFirst -bool true
 defaults write com.apple.finder AppleShowAllFiles -bool true
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 defaults write com.apple.finder FXPreferredViewStyle Nlsv # Set list view as preferred view style
+defaults write com.apple.finder FXDefaultSearchScope SCcf # Use the current folder as default search scope
 defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder ShowStatusBar -bool true
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
