@@ -4,8 +4,17 @@
 # fi
 
 alias flushdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;echo "DNS flushed"'
-alias dnt="dotnet"
 alias ls="ls -Gla --color"
+
+alias dnt="dotnet"
+alias defm="dotnet ef migrations"
+alias defd="dotnet ef database"
+
+# cd-ing into .NET DDD projects
+alias cda="cd *API*"
+alias cdb="cd *Backend*"
+alias cdd="cd *Domain*"
+alias cdi="cd *Infrastructure*"
 
 alias tf="terraform"
 alias tfws="terraform workspace select"
