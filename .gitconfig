@@ -2,6 +2,7 @@
 	excludesfile = ~/.gitignore_global
 	editor = vim
 	ignorecase = false
+    longpaths = true
 [user]
 	name = phwt
 	email = 28344318+phwt@users.noreply.github.com
@@ -17,6 +18,9 @@
 	followTags = true
 [init]
 	defaultBranch = main
+[http]
+        sslbackend = schannel
 [credential]
 	helper = 
-	helper = /usr/local/share/gcm-core/git-credential-manager
+	helper = /usr/local/share/gcm-core/git-credential-manager ; macOS
+	; helper = store ; Windows
