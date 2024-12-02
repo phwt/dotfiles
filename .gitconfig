@@ -19,7 +19,7 @@
 [init]
 	defaultBranch = main
 [http]
-        sslbackend = schannel
+	sslbackend = schannel
 [credential]
 	helper = 
 	helper = /usr/local/share/gcm-core/git-credential-manager ; macOS
