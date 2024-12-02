@@ -2,7 +2,7 @@
 	excludesfile = ~/.gitignore_global
 	editor = vim
 	ignorecase = false
-    longpaths = true
+	longpaths = true
 [user]
 	name = phwt
 	email = 28344318+phwt@users.noreply.github.com
