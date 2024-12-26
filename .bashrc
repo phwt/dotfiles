@@ -87,6 +87,8 @@ alias gfp="git fetch --prune"
 alias gbdm="git branch --merged | egrep -v \"(^\*|master|main|dev|acc)\" | xargs git branch -d" # Delete merged branch
 alias gbds="git-delete-squashed"                                                                # https://github.com/teppeis/git-delete-squashed
 alias gbc="gbdm && gbds"
+alias ga.="git add ."
+alias gcamd="git commit --amend"
 
 alias nr="npm run"
 alias ns="npm start"
