@@ -3,9 +3,19 @@
 	editor = vim
 	ignorecase = false
 	longpaths = true
+	# sshCommand = C:/Windows/System32/OpenSSH/ssh.exe ; Windows
 [user]
 	name = phwt
 	email = 28344318+phwt@users.noreply.github.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICvQKPtuoAAuKYlgN6JQDxXz+CDVwRO8ODqAlAICAyIh
+[gpg]
+  format = ssh
+[gpg "ssh"]
+	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign" ; macOS
+	# program = %LocalAppData%/1Password/app/8/op-ssh-sign.exe ; Windows
+	allowedSignersFile = ~/.config/git/allowed-signers
+[commit]
+  gpgsign = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
