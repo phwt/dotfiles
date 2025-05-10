@@ -1,3 +1,4 @@
 *.app
 Thumbnail.png
 .DS_Store
+*.local

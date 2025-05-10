@@ -1,0 +1,12 @@
+[core]
+	sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
+
+[gpg "ssh"]
+	program = %LocalAppData%/1Password/app/8/op-ssh-sign.exe
+	; allowedSignersFile = # TODO: Config for Windows
+
+[credential]
+	helper = store
+
+[http]
+	sslbackend = schannel
