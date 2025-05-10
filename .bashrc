@@ -71,24 +71,29 @@ function gtd() {
 
 # Clone and cd
 function gccd() {
-    git clone "$1" && cd "$(basename $1 .git)"
+    git clone "$1" --recurse-submodules && cd "$(basename $1 .git)"
 }
 
 alias go="git open"
 alias goa="git open -b -s actions"                                    # Open repository actions page
 alias goc='git open -b -s compare/$(git rev-parse --abbrev-ref HEAD)' # Open compare page for current branch against default branch
-alias grhh="git reset HEAD^"                                          # Uncommit latest
-alias gstas='git stash -- $(git diff --staged --name-only)'           # Stash only staged changes
+
+alias ga.="git add ."
+alias gcamd="git commit --amend"
+alias grhh="git reset HEAD^"                                # Uncommit latest
+alias gstas='git stash -- $(git diff --staged --name-only)' # Stash only staged changes
+alias gsur="git submodule update --remote"
+
+# Tag managements
 alias gt="git tag"
 alias gtdl="git tag -d"         # Delete local tag
 alias gtdr="git push -d origin" # Delete remote tag
-alias gsur="git submodule update --remote"
+
+# Branch clean-ups
 alias gfp="git fetch --prune"
 alias gbdm="git branch --merged | egrep -v \"(^\*|master|main|dev|acc)\" | xargs git branch -d" # Delete merged branch
 alias gbds="git-delete-squashed"                                                                # https://github.com/teppeis/git-delete-squashed
-alias gbc="gbdm && gbds"
-alias ga.="git add ."
-alias gcamd="git commit --amend"
+alias gbc="gbdm && gfp"
 
 alias nr="npm run"
 alias ns="npm start"
