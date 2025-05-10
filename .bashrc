@@ -74,6 +74,18 @@ function gccd() {
     git clone "$1" --recurse-submodules && cd "$(basename $1 .git)"
 }
 
+# Change remote GitHub URL to SSH
+function grchssh() {
+    remote_url=$(git remote get-url origin)
+    if [[ "$remote_url" =~ ^git@ ]]; then
+        echo "Already on SSH remote: $remote_url"
+    else
+        repo=$(echo "$remote_url" | sed -E 's|https://[^/]+/||')
+        ssh_url="git@github.com:${repo}"
+        git remote set-url origin "$ssh_url" && echo "Updated to SSH remote: $ssh_url"
+    fi
+}
+
 alias go="git open"
 alias goa="git open -b -s actions"                                    # Open repository actions page
 alias goc='git open -b -s compare/$(git rev-parse --abbrev-ref HEAD)' # Open compare page for current branch against default branch
