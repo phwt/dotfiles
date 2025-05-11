@@ -6,6 +6,8 @@
 
 - link:
     ~/.gitconfig: .gitconfig
+    ~/.gitconfig.windows: .gitconfig.windows
+    ~/.gitconfig.local: .gitconfig.local
     ~/.zshrc: .zshrc
     ~/.bashrc: .bashrc
     ~/.vimrc: .vimrc
