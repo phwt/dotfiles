@@ -6,8 +6,10 @@
 
 - link:
     ~/.gitconfig: .gitconfig
-    ~/.gitconfig.windows: .gitconfig.windows
     ~/.gitconfig.local: .gitconfig.local
+    ~/.gitconfig.windows:
+      if: '[ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]'
+      path: .gitconfig.windows
     ~/.zshrc: .zshrc
     ~/.bashrc: .bashrc
     ~/.vimrc: .vimrc
