@@ -5,7 +5,11 @@
 - clean: ["~"]
 
 - shell:
-  - touch .gitconfig.local
+    - touch .gitconfig.local
+
+- create:
+    ~/.ssh:
+      mode: 0700
 
 - link:
     ~/.gitconfig: .gitconfig
@@ -17,6 +21,5 @@
     ~/.bashrc: .bashrc
     ~/.vimrc: .vimrc
     ~/.p10k.zsh: .p10k.zsh
-    ~/.ssh/config:
-      create: true
-      path: .ssh/config
+    ~/.ssh/config: .ssh/config
+    ~/.ssh/personal.pub: .ssh/personal.pub
