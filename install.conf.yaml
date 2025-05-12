@@ -14,3 +14,6 @@
     ~/.bashrc: .bashrc
     ~/.vimrc: .vimrc
     ~/.p10k.zsh: .p10k.zsh
+    ~/.ssh/config:
+      create: true
+      path: .ssh/config
