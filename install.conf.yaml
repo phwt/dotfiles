@@ -4,6 +4,9 @@
 
 - clean: ["~"]
 
+- shell:
+  - touch .gitconfig.local
+
 - link:
     ~/.gitconfig: .gitconfig
     ~/.gitconfig.local: .gitconfig.local
